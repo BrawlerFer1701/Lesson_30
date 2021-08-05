@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    	*{margin: 0; padding: 0; box-sizing: border-box;}
+    	.container1{
+    		background: #5656F9;
+    		padding: 10px;
+    		display: flex;
+    		flex-direction: row;
+    		margin-bottom: 10px;
+    	}
+    	div > div{
+    		padding: 20px;
+    		background: #B8B0B0;
+    		text-align: center;
+    		color: white;
+    		margin-right: 10px;
+    		font-size: 30px;
+    		margin-bottom: 10px;
+    		width: 20%;
+    	}
+    	.container2{
+    		background: #5656F9;
+    		padding: 10px;
+    		display: flex;
+    		flex-direction: row-reverse;
+    		margin-bottom: 10px;
+    	}
+    	/*.container3{
+    		background: #5656F9;
+    		padding: 10px;
+    		display: flex;
+    		flex-direction: column;
+    		margin-bottom: 10px;
+    	}
+    	.container4{
+    		background: #5656F9;
+    		padding: 10px;
+    		display: flex;
+    		flex-direction: column-reverse;
+    		margin-bottom: 10px;
+    	}*/
+    	@media (max-width: 375px){
+    		.container1, .container2{
+    			flex-direction: column;
+    		}
+    		div > div{
+    			width: 100%;
+    		}
+    	}
+    </style>
+</head>
+<body>
+    <div class="container1">
+    	<div>1</div>
+    	<div>2</div>
+    	<div>3</div>
+    </div>
+
+    <div class="container2">
+    	<div>1</div>
+    	<div>2</div>
+    	<div>3</div>
+    </div>
+
+    <!-- <div class="container3">
+    	<div id="item1">1</div>
+    	<div id="item2">2</div>
+    	<div id="item3">3</div>
+    </div>
+
+    <div class="container4">
+    	<div id="item1">1</div>
+    	<div id="item2">2</div>
+    	<div id="item3">3</div>
+    </div> -->
+</body>
+</html>
