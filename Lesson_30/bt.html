@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		h1, p{
+			margin-bottom: 20px;
+			margin-top: 20px;			
+			width: 100%;
+			text-align: center;
+		}
+		.container{
+			width: 100%;
+			display: grid;
+			grid-template-columns: repeat(4, auto);
+		}
+		.container > div{
+			border: 1px solid #9D9A9A;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		div > img{
+			width: 100%;
+			height: auto;
+		}
+		
+		@media (max-width: 768px){
+			.container{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.container > div{
+				width: 50%;
+				margin-bottom: 10px;
+			}
+		}
+		@media screen and (max-width: 375px){
+			.container{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.container > div{
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			
+		}
+		
+	</style>
+</head>
+<body>
+	<h1>Responsive image Grid</h1>
+	<p>Resize the browser window to see the responsive effect</p>
+	<div class="container">
+		<div class="col_1">
+			<img src="imgs\rose.png" alt="">
+			<img src="imgs\sunflower.png" alt="">
+			<img src="imgs\pink.png" alt="">
+			
+		</div>
+		<div class="col_2">
+			<img src="imgs\8820936.png" alt="">
+			<img src="imgs\wildflower.png" alt="">
+			<img src="imgs\tulips-2020.png" alt="">
+			<img src="imgs\violet_iris.png" alt="">
+		</div>
+		<div class="col_3">
+			<img src="imgs\8820936.png" alt="">
+			<img src="imgs\wildflower.png" alt="">
+			<img src="imgs\tulips-2020.png" alt="">
+			<img src="imgs\violet_iris.png" alt="">
+		</div>
+		<div class="col_4">
+			<img src="imgs\rose.png" alt="">
+			<img src="imgs\sunflower.png" alt="">
+			<img src="imgs\pink.png" alt="">
+		</div>
+	</div>
+</body>
+</html>
