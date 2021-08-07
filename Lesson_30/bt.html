@@ -17,9 +17,13 @@
 			text-align: center;
 		}
 		.container{
+			margin-top: 100px;
 			width: 100%;
 			display: grid;
 			grid-template-columns: repeat(4, auto);
+			opacity: 0;
+			visibility: hidden;
+			transition: 1s;			
 		}
 		.container > div{
 			border: 1px solid #9D9A9A;
@@ -30,7 +34,33 @@
 			width: 100%;
 			height: auto;
 		}
+		input[type=radio]{display: none;}
+		button{
+			width: 100px;
+			height: 50px;
+			/*padding: 15px;*/
+			margin: auto;
+			border: 1px solid #D5CDCD;
+			border-radius: 15px;
+			position: absolute;
+			transform: translateX(-50%);
+		}
+		button#hide{
+			left: 70%;
+		}
+		button#show{
+			left: 30%;
+		}
+		label{cursor: pointer;}
 		
+		input[type=radio]#btn_show:checked ~ div{
+			opacity: 1;
+			visibility: visible;
+		}
+		input[type=radio]#btn_hide:checked ~ div{
+			opacity: 0;
+			visibility: hidden;
+		}
 		@media (max-width: 768px){
 			.container{
 				display: flex;
@@ -42,6 +72,11 @@
 			}
 		}
 		@media screen and (max-width: 375px){
+			p{
+				padding-right: 20px;
+				padding-left: 20px;
+				line-height: 1.6;
+			}
 			.container{
 				display: flex;
 				flex-wrap: wrap;
@@ -49,8 +84,7 @@
 			.container > div{
 				width: 100%;
 				margin-bottom: 10px;
-			}
-			
+			}		
 		}
 		
 	</style>
@@ -58,6 +92,10 @@
 <body>
 	<h1>Responsive image Grid</h1>
 	<p>Resize the browser window to see the responsive effect</p>
+		<input type="radio" id="btn_show" name="btn">
+		<button id="show"><label for="btn_show"><b>SHOW</b> </label></button>
+		<input type="radio" id="btn_hide" name="btn">
+		<button id="hide"><label for="btn_hide"><b>HIDE</b> </label></button>
 	<div class="container">
 		<div class="col_1">
 			<img src="imgs\rose.png" alt="">
